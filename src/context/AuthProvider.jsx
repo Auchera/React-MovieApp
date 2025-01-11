@@ -22,7 +22,7 @@ const AuthProvider = ({ children }) => {
 
   const createUser = async (email, password, displayName) => {
     try {
-      let userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      // let userCredential = await createUserWithEmailAndPassword(auth, email, password);
       await updateProfile(auth.currentUser, { displayName });
       navigate("/");
       toastSuccessNotify("Registered successfully");
@@ -33,7 +33,7 @@ const AuthProvider = ({ children }) => {
 
   const signIn = async (email, password) => {
     try {
-      let userCredential = await signInWithEmailAndPassword(auth, email, password);
+      // let userCredential = await signInWithEmailAndPassword(auth, email, password);
       navigate("/");
       toastSuccessNotify("Logged in successfully");
     } catch (error) {

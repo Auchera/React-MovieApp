@@ -10,7 +10,7 @@ export const useMovieContext = () => {
 const API_KEY = "e332a85a405006a000ce18fbd74909ee";
 const API_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMzMyYTg1YTQwNTAwNmEwMDBjZTE4ZmJkNzQ5MDllZSIsIm5iZiI6MTczNjYxMjY4Mi40NzEsInN1YiI6IjY3ODI5YjRhMjE4ZmQ1N2FjZjRlZTUyNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SLH5JmDh0JZZZ7zZrT4FkTxGnbGDBxuaG6J6IBwYy0E";
 const FEATURED_API = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`;
-const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=`;
+// const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=`;
 
 const MovieProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
