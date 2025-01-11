@@ -1,6 +1,6 @@
 
 
-import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../auth/firebase";  
 import { useNavigate } from "react-router-dom";
@@ -20,7 +20,7 @@ const AuthProvider = ({ children }) => {
     userObserver();
   }, []);
 
-  const createUser = async (email, password, displayName) => {
+  const createUser = async ( displayName) => {
     try {
       // let userCredential = await createUserWithEmailAndPassword(auth, email, password);
       await updateProfile(auth.currentUser, { displayName });
@@ -31,7 +31,7 @@ const AuthProvider = ({ children }) => {
     }
   };
 
-  const signIn = async (email, password) => {
+  const signIn = async () => {
     try {
       // let userCredential = await signInWithEmailAndPassword(auth, email, password);
       navigate("/");
